@@ -1,3 +1,4 @@
+/* import java.util.ArrayList; */
 public class LearnJava {
     public static void main(String[] args) {
         
@@ -5,7 +6,7 @@ public class LearnJava {
         System.out.println(exclaim);
     }
         /*Animal a = new Animal();
-        String wolf = a.iAmWolf();
+        String wolf = a.iAmWolf();  -->a.doStuff();<--
         System.out.println(wolf); */
 
     public static String addExclamationPoint(String s) {
