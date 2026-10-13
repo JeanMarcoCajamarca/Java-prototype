@@ -4,6 +4,9 @@ public class LearnJava {
         String exclaim = addExclamationPoint("hot dogs");
         System.out.println(exclaim);
     }
+        /*Animal a = new Animal();
+        String wolf = a.iAmWolf();
+        System.out.println(wolf); */
 
     public static String addExclamationPoint(String s) {
         return s + "!";
