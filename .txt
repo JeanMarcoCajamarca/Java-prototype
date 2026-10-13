@@ -1,0 +1,18 @@
+--> If run Java class with Visual Studio Code on Windows 11, chances are your program is in your Users folder, under your name, and under the JDK files folder, BUT probably saved through OneDrive.
+Below is the description of VCS terminal i had to tweak with to get the Java program running well:
+
+PS C:\Users\JeanMarco Cajamarca>  & 'C:\Users\JeanMarco Cajamarca\AppData\Local\Programs\Eclipse Adoptium\jdk-25.0.4.101-hotspot\bin\java.exe' '-XX:+ShowCodeDetailsInExceptionMessages' '-cp' 'C:\Users\JeanMarco Cajamarca\AppData\Local\Temp\vscodesws_4e331\jdt_ws\jdt.ls-java-project\bin' 'Test' 
+Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 0 out of bounds for length 0
+        at Test.main(Test.java:3)
+PS C:\Users\JeanMarco Cajamarca> cd "OneDrive\Desktop\Java projects\Test"
+PS C:\Users\JeanMarco Cajamarca\OneDrive\Desktop\Java projects\Test> javac Test.java
+PS C:\Users\JeanMarco Cajamarca\OneDrive\Desktop\Java projects\Test> java Test "Jean Marco Cajamarca"
+Hello Jean Marco Cajamarca
+PS C:\Users\JeanMarco Cajamarca\OneDrive\Desktop\Java projects\Test> 
+
+--> Description from Gemini concerning OneDrive and the errors I encountered:
+" **OneDrive** is a cloud storage service built into Windows that automatically backs up folders like your Desktop and Documents to Microsoft's servers.
+When Windows sets up OneDrive, 
+it changes the actual physical folder paths on your hard drive to include the `OneDrive` folder wrapper (e.g., `C:\Users\Username\OneDrive\Desktop`), 
+even though it still looks like your regular Desktop in File Explorer. Because your terminal starts in your base user profile folder by default, 
+it couldn't find the `Desktop\Java projects` path directly without going through `OneDrive\` first. "
